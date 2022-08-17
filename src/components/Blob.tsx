@@ -16,34 +16,34 @@ export default function Blob({ className, height, colors }: BlobProps) {
   const getSafeColor = (index: number) =>
     typeof colors === "string" ? colors : colors[index];
 
-  useEffect(() => {
-    console.log("kute", KUTE);
-    const tween1 = KUTE.fromTo(
-      `#${blob1}`,
-      { path: `#${blob1}`, attr: { fill: getSafeColor(0) } },
-      { path: `#${blob2}`, attr: { fill: getSafeColor(1) } },
-      { duration: 3000, morphPercsion: 200 }
-    );
+  // useEffect(() => {
+  //   console.log("kute", KUTE);
+  //   const tween1 = KUTE.fromTo(
+  //     `#${blob1}`,
+  //     { path: `#${blob1}`, attr: { fill: getSafeColor(0) } },
+  //     { path: `#${blob2}`, attr: { fill: getSafeColor(1) } },
+  //     { duration: 3000, morphPercsion: 200 }
+  //   );
 
-    const tween2 = KUTE.fromTo(
-      `#${blob1}`,
-      { path: `#${blob2}`, attr: { fill: getSafeColor(1) } },
-      { path: `#${blob3}`, attr: { fill: getSafeColor(2) } },
-      { duration: 3000, morphPercsion: 200 }
-    );
+  //   const tween2 = KUTE.fromTo(
+  //     `#${blob1}`,
+  //     { path: `#${blob2}`, attr: { fill: getSafeColor(1) } },
+  //     { path: `#${blob3}`, attr: { fill: getSafeColor(2) } },
+  //     { duration: 3000, morphPercsion: 200 }
+  //   );
 
-    const tween3 = KUTE.fromTo(
-      `#${blob1}`,
-      { path: `#${blob3}`, attr: { fill: getSafeColor(2) } },
-      { path: `#${blob1}`, attr: { fill: getSafeColor(0) } },
-      { duration: 3000, morphPercsion: 200 }
-    );
+  //   const tween3 = KUTE.fromTo(
+  //     `#${blob1}`,
+  //     { path: `#${blob3}`, attr: { fill: getSafeColor(2) } },
+  //     { path: `#${blob1}`, attr: { fill: getSafeColor(0) } },
+  //     { duration: 3000, morphPercsion: 200 }
+  //   );
 
-    tween1.chain(tween2);
-    tween2.chain(tween3);
-    tween3.chain(tween1);
-    tween1.start();
-  }, [id, blob1, blob2, blob3]);
+  //   tween1.chain(tween2);
+  //   tween2.chain(tween3);
+  //   tween3.chain(tween1);
+  //   tween1.start();
+  // }, [id, blob1, blob2, blob3]);
 
   return (
     <svg

@@ -1,9 +1,10 @@
 ---
 	import Layout from '../layouts/Layout.astro';
 	import Blob from '../components/Blob.jsx';
+	import Card from '../components/Card.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Akash Eldo | Designer & Developer">
 	<main class="bg-gray-700 container p-3">
 		<section class="h-screen flex items-center justify-center flex-col">
 			<div class="z-10">
@@ -15,6 +16,25 @@
 				</p>
 			</div>
 			<Blob client:load height={1200} colors={["#EC4899" ,"#06B6D4" , "#10B981" ]} />
+		</section>
+		<section class="flex flex-col pt-24">
+			<div class="flex items-center justify-center flex-col">
+				<h2 class="z-10 text-2xl text-gray-50 font-medium text-center">
+					Work
+				</h2>
+				<Blob height={150} colors="#818CF8" />
+			</div>
+			<div class="pt-20 flex flex-col gap-4">
+				<Card title="Software Engineer" subtitle="Google • Aug. 22 - Present"
+					content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lobortis mauris dui suspendisse nunc sed egestas feugiat. Sit mattis et vel egestas ut."
+					tags={["JavaScript", "TypeScript" , "GraphQL" ]} />
+				<Card title="Software Engineer" subtitle="Google • Aug. 22 - Present"
+					content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lobortis mauris dui suspendisse nunc sed egestas feugiat. Sit mattis et vel egestas ut."
+					tags={["JavaScript", "TypeScript" , "GraphQL" ]} />
+				<Card title="Software Engineer" subtitle="Google • Aug. 22 - Present"
+					content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lobortis mauris dui suspendisse nunc sed egestas feugiat. Sit mattis et vel egestas ut."
+					tags={["JavaScript", "TypeScript" , "GraphQL" ]} />
+			</div>
 		</section>
 	</main>
 </Layout>

@@ -1,0 +1,23 @@
+---
+  export interface Props {
+    title: string;
+    subtitle?: string;
+    content: string;
+    tags: string[]
+  }
+
+  const { title, subtitle, content, tags } = Astro.props as Props;
+---
+
+<div class="bg-gray-600 rounded-xl p-4 shadow-2xl">
+  <h4 class="text-xl text-gray-200 font-medium">{title}</h4>
+  <h5 class="text-sm text-gray-200 font-light mb-4">{subtitle}</h5>
+  <p class="text-base text-gray-200">{content}</p>
+  <div class="flex mt-4 gap-2">
+    {tags.map((tag) => (
+    <div class="bg-gray-400 px-2 py-1 rounded-2xl text-sm text-gray-50">
+      {tag}
+    </div>
+    ))}
+  </div>
+</div>
