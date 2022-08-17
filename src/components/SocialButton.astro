@@ -1,0 +1,14 @@
+---
+  import { Icon } from 'astro-icon'
+
+  export interface Props {
+    href: string;
+    icon: string;
+  }
+
+  const { href, icon } = Astro.props as Props;
+---
+
+<a href={href} class="bg-gray-500 rounded-full p-5 flex justify-center items-center">
+  <Icon class="text-gray-50" name={icon} width="28" height="28" />
+</a>

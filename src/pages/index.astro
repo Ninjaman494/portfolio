@@ -2,6 +2,9 @@
 	import Layout from '../layouts/Layout.astro';
 	import Blob from '../components/Blob.astro';
 	import Card from '../components/Card.astro';
+	import Section from '../layouts/Section.astro';
+	import SocialButton from '../components/SocialButton.astro';
+	import Heading from '../components/Heading.astro';
 ---
 
 <Layout title="Akash Eldo | Designer & Developer">
@@ -17,23 +20,36 @@
 			</div>
 			<Blob height={500} />
 		</section>
-		<section class="flex flex-col pt-24">
-			<div class="flex items-center justify-center flex-col">
-				<h2 class="z-10 text-2xl text-gray-50 font-medium text-center">
-					Work
-				</h2>
-				<Blob height={125} />
-			</div>
-			<div class="pt-20 flex flex-col gap-4">
-				<Card title="Software Engineer" subtitle="Google • Aug. 22 - Present"
-					content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lobortis mauris dui suspendisse nunc sed egestas feugiat. Sit mattis et vel egestas ut."
-					tags={["JavaScript", "TypeScript" , "GraphQL" ]} />
-				<Card title="Software Engineer" subtitle="Google • Aug. 22 - Present"
-					content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lobortis mauris dui suspendisse nunc sed egestas feugiat. Sit mattis et vel egestas ut."
-					tags={["JavaScript", "TypeScript" , "GraphQL" ]} />
-				<Card title="Software Engineer" subtitle="Google • Aug. 22 - Present"
-					content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lobortis mauris dui suspendisse nunc sed egestas feugiat. Sit mattis et vel egestas ut."
-					tags={["JavaScript", "TypeScript" , "GraphQL" ]} />
+		<Section title="Work">
+			<Card title="Software Engineer" subtitle="Google • Aug. 22 - Present"
+				content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lobortis mauris dui suspendisse nunc sed egestas feugiat. Sit mattis et vel egestas ut."
+				tags={["JavaScript", "TypeScript" , "GraphQL" ]} />
+			<Card title="Software Engineer" subtitle="Google • Aug. 22 - Present"
+				content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lobortis mauris dui suspendisse nunc sed egestas feugiat. Sit mattis et vel egestas ut."
+				tags={["JavaScript", "TypeScript" , "GraphQL" ]} />
+			<Card title="Software Engineer" subtitle="Google • Aug. 22 - Present"
+				content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lobortis mauris dui suspendisse nunc sed egestas feugiat. Sit mattis et vel egestas ut."
+				tags={["JavaScript", "TypeScript" , "GraphQL" ]} />
+		</Section>
+		<Section title="Projects">
+			<Card title="Software Engineer" subtitle="Google • Aug. 22 - Present"
+				content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lobortis mauris dui suspendisse nunc sed egestas feugiat. Sit mattis et vel egestas ut."
+				tags={["JavaScript", "TypeScript" , "GraphQL" ]} />
+			<Card title="Software Engineer" subtitle="Google • Aug. 22 - Present"
+				content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lobortis mauris dui suspendisse nunc sed egestas feugiat. Sit mattis et vel egestas ut."
+				tags={["JavaScript", "TypeScript" , "GraphQL" ]} />
+			<Card title="Software Engineer" subtitle="Google • Aug. 22 - Present"
+				content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lobortis mauris dui suspendisse nunc sed egestas feugiat. Sit mattis et vel egestas ut."
+				tags={["JavaScript", "TypeScript" , "GraphQL" ]} />
+		</Section>
+		<section class="flex flex-col py-48">
+			<Heading>Contact</Heading>
+			<div class="pt-20 mx-12 flex flex-row flex-wrap justify-center gap-4">
+				<SocialButton href="#" icon="bi:github" />
+				<SocialButton href="#" icon="bi:behance" />
+				<SocialButton href="#" icon="ant-design:medium-outlined" />
+				<SocialButton href="#" icon="brandico:linkedin" />
+				<SocialButton href="#" icon="ant-design:mail-filled" />
 			</div>
 		</section>
 	</main>
