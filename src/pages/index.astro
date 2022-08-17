@@ -1,6 +1,6 @@
 ---
 	import Layout from '../layouts/Layout.astro';
-	import Blob from '../components/Blob.astro';
+	import Blob from '../components/Blob.jsx';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -14,10 +14,7 @@
 					I design and develop amazing web and mobile apps
 				</p>
 			</div>
-			<Blob height={1200} colors={["#818CF8", "#06B6D4" , "#EC4899" , "#10B981" ]} />
+			<Blob client:load height={1200} colors={["#EC4899" ,"#06B6D4" , "#10B981" ]} />
 		</section>
 	</main>
 </Layout>
-
-<style>
-</style>
