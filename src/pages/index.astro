@@ -5,6 +5,7 @@
 	import Section from '../layouts/Section.astro';
 	import SocialButton from '../components/SocialButton.astro';
 	import Heading from '../components/Heading.astro';
+	import cards from '../cards';
 ---
 
 <Layout title="Akash Eldo | Designer & Developer">
@@ -21,26 +22,10 @@
 			<Blob height={500} />
 		</section>
 		<Section title="Work">
-			<Card title="Software Engineer" subtitle="Google • Aug. 22 - Present"
-				content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lobortis mauris dui suspendisse nunc sed egestas feugiat. Sit mattis et vel egestas ut."
-				tags={["JavaScript", "TypeScript" , "GraphQL" ]} />
-			<Card title="Software Engineer" subtitle="Google • Aug. 22 - Present"
-				content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lobortis mauris dui suspendisse nunc sed egestas feugiat. Sit mattis et vel egestas ut."
-				tags={["JavaScript", "TypeScript" , "GraphQL" ]} />
-			<Card title="Software Engineer" subtitle="Google • Aug. 22 - Present"
-				content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lobortis mauris dui suspendisse nunc sed egestas feugiat. Sit mattis et vel egestas ut."
-				tags={["JavaScript", "TypeScript" , "GraphQL" ]} />
+			{cards.work.map(c => <Card card={c} />)}
 		</Section>
 		<Section title="Projects">
-			<Card title="Software Engineer" subtitle="Google • Aug. 22 - Present"
-				content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lobortis mauris dui suspendisse nunc sed egestas feugiat. Sit mattis et vel egestas ut."
-				tags={["JavaScript", "TypeScript" , "GraphQL" ]} />
-			<Card title="Software Engineer" subtitle="Google • Aug. 22 - Present"
-				content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lobortis mauris dui suspendisse nunc sed egestas feugiat. Sit mattis et vel egestas ut."
-				tags={["JavaScript", "TypeScript" , "GraphQL" ]} />
-			<Card title="Software Engineer" subtitle="Google • Aug. 22 - Present"
-				content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lobortis mauris dui suspendisse nunc sed egestas feugiat. Sit mattis et vel egestas ut."
-				tags={["JavaScript", "TypeScript" , "GraphQL" ]} />
+			{cards.projects.map(c => <Card card={c} />)}
 		</Section>
 		<section class="flex flex-col py-48">
 			<Heading>Contact</Heading>
