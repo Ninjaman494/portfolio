@@ -1,7 +1,7 @@
 ---
 	import Layout from '../layouts/Layout.astro';
 	import Blob from '../components/Blob.astro';
-	import Card from '../components/Card.astro';
+	import Card from '../components/Card';
 	import Section from '../layouts/Section.astro';
 	import SocialButton from '../components/SocialButton.astro';
 	import Heading from '../components/Heading.astro';
@@ -22,10 +22,12 @@
 			<Blob height={500} />
 		</section>
 		<Section title="Work">
-			{cards.work.map(c => <Card card={c} />)}
+			{cards.work.map(c =>
+			<Card card={c} />)}
 		</Section>
 		<Section title="Projects">
-			{cards.projects.map(c => <Card card={c} />)}
+			{cards.projects.map(c =>
+			<Card card={c} />)}
 		</Section>
 		<section class="flex flex-col py-48">
 			<Heading>Contact</Heading>
