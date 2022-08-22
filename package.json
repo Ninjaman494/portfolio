@@ -13,6 +13,7 @@
     "@astrojs/react": "^1.0.0",
     "@astrojs/tailwind": "^1.0.0",
     "@types/react": "^18.0.17",
+    "@types/react-transition-group": "^4.4.5",
     "astro": "^1.0.6",
     "prettier": "^2.7.1",
     "react": "^18.2.0",
@@ -21,6 +22,7 @@
   "dependencies": {
     "astro-icon": "^0.7.3",
     "kute.js": "^2.2.4",
+    "react-transition-group": "^4.4.5",
     "uuid": "^8.3.2"
   }
 }

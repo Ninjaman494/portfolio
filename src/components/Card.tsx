@@ -20,7 +20,7 @@ export default function Card({ card }: Props) {
       <p className="text-base text-gray-200">{description}</p>
       <div className="flex flex-wrap mt-4 gap-2">
         {tags.map((tag) => (
-          <Tag key={tag}>{tag}</Tag>
+          <Tag key={card.title + tag}>{tag}</Tag>
         ))}
       </div>
     </div>
