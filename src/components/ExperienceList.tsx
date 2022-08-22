@@ -1,15 +1,9 @@
 import { useState } from "react";
-import {
-  CSSTransition,
-  SwitchTransition,
-  TransitionGroup,
-} from "react-transition-group";
+import FlipMove from "react-flip-move";
 import cards from "../cards";
 import Card from "./Card";
 import Tag from "./Tag";
-import "./styles.css";
 
-// pick item, remaining fade out, picked slides to join selected, remainingTags fade in
 export default function ExperienceList() {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
@@ -24,49 +18,30 @@ export default function ExperienceList() {
     ),
   ].filter((tag) => !selectedTags.includes(tag));
 
-  const timeout = 700;
-  const classNames = "item";
-
   return (
     <>
-      <div className="flex flex-row gap-2 -mr-3 pr-3 overflow-x-auto">
-        <TransitionGroup component={null}>
-          {selectedTags.map((tag) => (
-            <CSSTransition
-              key={tag + "-s"}
-              classNames={classNames}
-              timeout={timeout}
-              addEndListener={() => {}}
-            >
-              <Tag
-                active
-                onClick={() =>
-                  setSelectedTags(selectedTags.filter((t) => t !== tag))
-                }
-              >
-                {tag}
-              </Tag>
-            </CSSTransition>
-          ))}
-
-          {remainingTags.map((tag) => (
-            <CSSTransition
-              key={tag + "-r"}
-              classNames={classNames}
-              timeout={timeout}
-              addEndListener={() => {}}
-            >
-              <Tag
-                key={tag + "-r"}
-                onClick={() => setSelectedTags([...selectedTags, tag])}
-              >
-                {tag}
-              </Tag>
-            </CSSTransition>
-          ))}
-        </TransitionGroup>
-      </div>
-
+      {/** @ts-ignore outdated prop type doesn't include children */}
+      <FlipMove className="flex flex-row gap-2 -mr-3 pr-3 overflow-x-auto">
+        {selectedTags.map((tag) => (
+          <Tag
+            active
+            key={tag}
+            onClick={() =>
+              setSelectedTags(selectedTags.filter((t) => t !== tag))
+            }
+          >
+            {tag}
+          </Tag>
+        ))}
+        {remainingTags.map((tag) => (
+          <Tag
+            key={tag}
+            onClick={() => setSelectedTags([...selectedTags, tag])}
+          >
+            {tag}
+          </Tag>
+        ))}
+      </FlipMove>
       <div className="pt-4 flex flex-col gap-4">
         {experiences.map((c) => (
           <Card key={c.title} card={c} />
