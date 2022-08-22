@@ -6,6 +6,9 @@
 	import SocialButton from '../components/SocialButton.astro';
 	import Heading from '../components/Heading.astro';
 	import cards from '../cards';
+
+	const workCards = cards.filter(({ type }) => type === 'work').slice(0, 3);
+	const projectCards = cards.filter(({ type }) => type === 'project').slice(0, 3);
 ---
 
 <Layout title="Akash Eldo | Designer & Developer">
@@ -22,11 +25,11 @@
 			<Blob height={500} />
 		</section>
 		<Section title="Work">
-			{cards.work.map(c =>
+			{workCards.map(c =>
 			<Card card={c} />)}
 		</Section>
 		<Section title="Projects">
-			{cards.projects.map(c =>
+			{projectCards.map(c =>
 			<Card card={c} />)}
 		</Section>
 		<section class="flex flex-col py-48">

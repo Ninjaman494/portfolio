@@ -3,17 +3,12 @@ import cards from "../cards";
 import Card from "./Card";
 import Tag from "./Tag";
 
-const allExperiences = [...cards.projects, ...cards.work];
-
 export default function ExperienceList() {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
-  const experiences =
-    selectedTags.length === 0
-      ? allExperiences
-      : allExperiences.filter(
-          ({ tags }) => !selectedTags.some((t) => !tags.includes(t))
-        );
+  const experiences = !selectedTags.length
+    ? cards
+    : cards.filter(({ tags }) => !selectedTags.some((t) => !tags.includes(t)));
 
   const remainingTags = [
     ...experiences.reduce(
