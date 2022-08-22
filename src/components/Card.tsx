@@ -1,4 +1,5 @@
 import type { ProjectCard, WorkCard } from "../cards";
+import Tag from "../components/Tag";
 
 export interface Props {
   card: WorkCard | ProjectCard;
@@ -19,12 +20,7 @@ export default function Card({ card }: Props) {
       <p className="text-base text-gray-200">{description}</p>
       <div className="flex flex-wrap mt-4 gap-2">
         {tags.map((tag) => (
-          <div
-            key={`${card.title}-${tag}`}
-            className="bg-gray-400 px-2 py-1 rounded-full text-sm text-gray-50"
-          >
-            {tag}
-          </div>
+          <Tag key={tag}>{tag}</Tag>
         ))}
       </div>
     </div>
