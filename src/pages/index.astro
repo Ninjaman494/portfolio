@@ -6,6 +6,7 @@
 	import SocialButton from '../components/SocialButton.astro';
 	import Heading from '../components/Heading.astro';
 	import cards from '../cards';
+	import SeeAll from '../components/SeeAll.astro';
 
 	const workCards = cards.filter(({ type }) => type === 'work').slice(0, 3);
 	const projectCards = cards.filter(({ type }) => type === 'project').slice(0, 3);
@@ -27,10 +28,12 @@
 		<Section title="Work">
 			{workCards.map(c =>
 			<Card card={c} />)}
+			<SeeAll />
 		</Section>
 		<Section title="Projects">
 			{projectCards.map(c =>
 			<Card card={c} />)}
+			<SeeAll />
 		</Section>
 		<section class="flex flex-col py-48">
 			<Heading>Contact</Heading>

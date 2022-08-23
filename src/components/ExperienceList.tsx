@@ -4,7 +4,7 @@ import cards from "../cards";
 import Card from "./Card";
 import Tag from "./Tag";
 
-const defaultList = ["JavaScript", "Android", "Python"];
+const defaultList = ["JavaScript", "Python", "Android", "React Native"];
 
 export default function ExperienceList() {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
