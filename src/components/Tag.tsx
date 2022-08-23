@@ -14,11 +14,14 @@ const Tag = forwardRef(({ active, onClick, children }: TagProps, ref) => {
       ? "hover:bg-gray-300 hover:text-gray-600"
       : "hover:bg-gray-400"
     : "";
+  const focus = onClick
+    ? "focus:outline-none focus:ring focus:ring-gray-50"
+    : "";
 
   return (
     <Element
       ref={ref as any}
-      className={`${bgColor} ${hover} group px-2 py-1 rounded-full text-sm text-gray-50 whitespace-nowrap`}
+      className={`${bgColor} ${hover} ${focus} group px-2 py-1 rounded-full text-sm text-gray-50 whitespace-nowrap`}
       onClick={onClick}
     >
       {children}
