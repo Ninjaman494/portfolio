@@ -9,6 +9,6 @@
   const { href, icon } = Astro.props as Props;
 ---
 
-<a href={href} class="bg-gray-500 rounded-full p-5 flex justify-center items-center">
-  <Icon class="text-gray-50" name={icon} width="28" height="28" />
+<a target="_blank" {href} class="group bg-gray-500 rounded-full p-5 flex justify-center items-center hover:bg-gray-300">
+  <Icon class="text-gray-50 group-hover:text-gray-600" name={icon} width="28" height="28" />
 </a>
