@@ -24,20 +24,20 @@
 					I design and develop amazing web and mobile apps
 				</p>
 			</div>
-			<Blob height="75%" />
+			<Blob height="75%" variation="hero" />
 		</section>
-		<Section title="Work">
+		<Section title="Work" variation={1}>
 			{workCards.map(c =>
 			<Card card={c} />)}
 			<SeeAll />
 		</Section>
-		<Section title="Projects">
+		<Section title="Projects" variation={2}>
 			{projectCards.map(c =>
 			<Card card={c} />)}
 			<SeeAll />
 		</Section>
 		<section class="flex flex-col py-48">
-			<Heading>Contact</Heading>
+			<Heading variation={3}>Contact</Heading>
 			<div class="pt-20 mx-12 flex flex-row flex-wrap justify-center gap-4">
 				<SocialButton href="https://github.com/Ninjaman494" icon="bi:github" />
 				<SocialButton href="https://www.behance.net/akasheldo" icon="bi:behance" />

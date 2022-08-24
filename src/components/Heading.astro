@@ -1,11 +1,16 @@
 ---
   import Blob from './Blob.astro'
 
+  export interface Props {
+    variation?: 1 | 2 | 3;
+  }
+
+  const { variation = 1 } = Astro.props as Props;
 ---
 
 <div class="flex items-center justify-center flex-col">
   <h2 class="z-10 text-2xl text-gray-50 font-medium text-center">
     <slot />
   </h2>
-  <Blob height={125} />
+  <Blob height={125} {variation} />
 </div>
