@@ -25,7 +25,7 @@ export default function ExperienceList() {
   return (
     <>
       {/** @ts-ignore outdated prop type doesn't include children */}
-      <FlipMove className="flex flex-row gap-2 -mx-3 py-1 px-3 overflow-x-auto">
+      <FlipMove className="flex flex-row gap-2 -mx-3 py-1 px-3 overflow-x-auto md:overflow-x-visible">
         {!!selectedTags.length && (
           <Tag active onClick={() => setSelectedTags([])}>
             {/* X icon */}
