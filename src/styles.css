@@ -7,3 +7,7 @@
     @apply transition ease-in-out duration-300;
   }
 }
+
+:root {
+  --animate-delay: 0.5s !important;
+}

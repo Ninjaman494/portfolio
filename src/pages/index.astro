@@ -10,16 +10,17 @@
 
 	const workCards = cards.filter(({ type }) => type === 'work').slice(0, 3);
 	const projectCards = cards.filter(({ type }) => type === 'project').slice(0, 3);
+	const animatedClass = 'animate__animated animate__fadeIn animate__delay-1s'
 ---
 
 <Layout title="Akash Eldo | Designer & Developer">
 	<main class="bg-gray-700 container p-3 mx-auto">
 		<section class="h-screen flex items-center justify-center flex-col">
 			<div class="z-10">
-				<h1 class="text-5xl text-gray-50 font-bold text-center m-1 md:text-7xl">
+				<h1 class={`${animatedClass} animate__fast text-5xl text-gray-50 font-bold text-center m-1 md:text-7xl`}>
 					Hi, I'm Akash
 				</h1>
-				<p class="text-gray-50 text-center md:text-xl">
+				<p class={`${animatedClass} animate__slow text-gray-50 text-center md:text-xl`}>
 					I design and develop amazing web and mobile apps
 				</p>
 			</div>

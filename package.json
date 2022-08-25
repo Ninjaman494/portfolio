@@ -20,6 +20,7 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "astro-icon": "^0.7.3",
     "kute.js": "^2.2.4",
     "react-flip-move": "^3.0.4",
