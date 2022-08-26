@@ -18,8 +18,7 @@ export type ProjectCard = {
 const cards: (WorkCard | ProjectCard)[] = [
   {
     title: "Software Engineer",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lobortis mauris dui suspendisse nunc sed egestas feugiat. Sit mattis et vel egestas ut.",
+    description: "Check back later!",
     tags: ["JavaScript"],
     company: "Google",
     startDate: "Aug. 2022",
