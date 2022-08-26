@@ -1,12 +1,14 @@
 ---
   import '../styles.css';
   import 'animate.css';
+  import { SEO } from "astro-seo";
 
   export interface Props {
     title: string;
+    description: string;
   }
 
-  const { title } = Astro.props as Props;
+  const { title, description } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
@@ -18,7 +20,7 @@
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <meta name="generator" content={Astro.generator} />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900" rel="stylesheet" />
-  <title>{title}</title>
+  <SEO {title} description={description} />
 </head>
 
 <body class="bg-gray-700">
