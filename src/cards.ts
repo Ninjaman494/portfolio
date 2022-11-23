@@ -19,7 +19,7 @@ const cards: (WorkCard | ProjectCard)[] = [
   {
     title: "Software Engineer",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus lobortis mauris dui suspendisse nunc sed egestas feugiat. Sit mattis et vel egestas ut.",
+      "I'm part of the video calling team at Google, and work on platforms like Gmail, Meet, and Chat. I use a variety of in house technologies to fix bugs and build new features on websites that are used by over a billion people.",
     tags: ["JavaScript"],
     company: "Google",
     startDate: "Aug. 2022",
