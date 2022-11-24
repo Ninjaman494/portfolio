@@ -8,6 +8,30 @@
   }
 }
 
+@keyframes zoomAndFade {
+  from {
+    opacity: 0;
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 :root {
   --animate-delay: 0.5s !important;
+}
+
+.animate__delay-05s {
+  --animate-delay: 0.5s !important;
+}
+
+.zoomAndFade {
+  animation: zoomAndFade;
+
 }
