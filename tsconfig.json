@@ -8,9 +8,12 @@
     "isolatedModules": true,
     "noEmit": true,
     "strict": true,
-    "importsNotUsedAsValues": "error",
     "paths": {
-      "@assets/*": ["src/assets/*"],
-    }
+      "@assets/*": [
+        "src/assets/*"
+      ]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }
